@@ -1,0 +1,65 @@
+html
+  head
+    title The Grey Zone
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="description" content="dope")
+    link(href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400" rel="stylesheet")
+    link(rel="stylesheet" href="css/main.css")
+    link(rel="canonical" href="http://localhost:4000/")
+  body
+    section
+      h1.title The Grey Zone 
+    main
+      section.col-70
+        img(class="bookPhoto"  src="/img/bookPhoto.png" alt="The Grey Zone by Jason McMillan")
+        .bioWrapper
+          img(class="headshot" src="/img/headshot.png" alt="Author Jason McMillan")
+          .bio
+            h4 Jason McMillan 
+            p Is the author of The Grey Zone. It is his debut novel. He attended the University of Nebraska and currently resides in Omaha. 
+
+      section.col-40
+        .Graphicsquare
+        .blurbWrapper
+          .borderWrap
+            h2 The Future is Grey
+          p.blurb For most of the world, life had improved after the implementation of the Basic Human Standard and the formation of the Global Federation of Nations. However, after fifteen years, there are still people who fight against the principles of the organization. Natalie Kelley is a journalist for the Chicago Tribune, reporting on American terrorist groups in opposition to the GFN. When an Oklahoma City restaurant is attacked, Natalie travels to investigate the incident. Soon, Natalie begins to question whether the assault was an amateur action or part of a larger conspiracy. Following Natalie and a cast of characters from both sides of the battle, The Grey Zone explores the ramifications of an exceedingly globalized planet as conflicting ideologies clash across the United States. 
+
+          h3 Releasing October 13, 2017
+          p Preorder a copy
+          .formWrapper
+            form
+              .copies
+                label(for="copies") Copies:
+                input(type="number")
+              .typeOfOrder
+                select
+                  option Hardcover: $24.99
+                  option Paperback: $14.99 
+              .deliveryOptions
+                label(for="deliveryOptions") Delivery Options:
+                select
+                  option ship to address
+              .name    
+                label(for="name") Name:
+                input(type="text")
+              .email
+                label(for="email") Email:
+                input(type="email")
+              .CreditNumber
+                label(type="payment") Payment Information:  
+                input(type="number")
+              .expDate
+                label(for="expDate")
+                input(type="number")
+                input(type="number")  
+              .secCode
+                label(for="secCode")
+                input(type="number")
+                
+              input(type="submit" value="order")  
+        .Graphicsquare.reverse
+    footer
+      p &copy; 2017 Rooney Publishing <span class="piper">|</span> <a href="http://brycestradling.com">Webdesign by Bryce Stradling</a>
