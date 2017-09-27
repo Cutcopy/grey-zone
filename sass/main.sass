@@ -30,6 +30,7 @@ h2
   color: white
   font-size: 3rem
   margin: 2rem 0
+  line-height: 3rem
 
 h4
   font-size: 2rem
@@ -125,3 +126,12 @@ footer
   padding-left: 2rem
   color: white
   letter-spacing: 1px
+
+@media screen and (min-width: 770px)
+  .mobile
+    display: none
+@media screen and (max-width: 770px)
+  .desktop
+    display: none
+
+@import "mobile"
