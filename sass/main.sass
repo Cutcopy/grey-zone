@@ -2,6 +2,8 @@ $grey: #8A92A1
 $dark-grey: #363A42
 $background-grad: linear-gradient(-180deg, $grey 3%, $dark-grey 100%)
 
+@import "mixins"
+
 html
   background-color: $grey
   background: $background-grad
@@ -26,6 +28,10 @@ h1
   text-shadow: 0 2px 72px #696F7A
   margin-top: 2rem
   margin: 2rem 0
+  +phones
+    font-size: 120px
+    font-weight: bold
+    color: transparentize(#23262C, 0.5)
 h2
   color: white
   font-size: 3rem
@@ -55,12 +61,32 @@ section
   right: 160px
   top: 1rem
   z-index: 1
+
+.col-100
+  width: 100%
+
 .bookPhoto
   width: 90%
   //max-width: 50vw
 .headshot
   max-width: 30rem
   margin-left: 1rem
+
+#fb_link
+  text-decoration: none
+  background: #29487d
+  border-radius: 10px
+  padding: 0.5rem
+  margin-top: 1rem
+  display: inline-block
+  &:hover
+    background: #4267b2
+#facebook
+  width: 20px
+  height: 20px
+  position: relative
+  top: 4px
+
 .bio
   color: white
   letter-spacing: 1.5px
@@ -70,23 +96,27 @@ section
   box-shadow: 0 0 20px 0 rgba(0,0,0,0.50)
   width: 20rem
   padding: 1rem
-  position: absolute
-  right: 10rem
-  bottom: 5rem
+  +not-phones
+    position: absolute
+    right: 10rem
+    bottom: 5rem
+  +phones
+    position: static
+    width: 80%
+    margin: 0 auto
   box-shadow: 0 0 20px 0 rgba(0,0,0,0.50)
 .bioWrapper
   position: relative
-.blurbWrapper
-  color: white
-  letter-spacing: 1.5px
-  line-height: 21px
-  background: #23262C
-  border-radius: 10px
-  width: 100%
-  //border: 100px solid transparent
-  //border-image: url(/img/Graphicsquare.svg) 100% repeat
-  padding: 1rem
-  padding-right: 3rem
+.desktop
+  .blurbWrapper
+    color: white
+    letter-spacing: 1.5px
+    line-height: 21px
+    background: #23262C
+    border-radius: 10px
+    width: 100%
+    padding: 1rem
+    padding-right: 3rem
 .blurb::first-letter
   font-size: 2rem
   padding-left: 0.5rem
@@ -108,8 +138,14 @@ section
   position: relative
   top: -230px
   left: -60px
-  z-index: 2
+  z-index: -8
 
+table
+  color: white
+select
+  padding: 1rem
+  margin: 1rem 0rem
+  background: white
 input, label
   display: block
   margin-bottom: 1rem
