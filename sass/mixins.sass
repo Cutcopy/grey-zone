@@ -1,0 +1,38 @@
+// ~*~*~*~  FOR MEDIA QUERIES
+
+// never on--
+@mixin not-phones
+  @media screen and (min-width: 770px)
+    @content
+
+@mixin not-tablets
+  @media screen and (min-width: 992px)
+    @content
+
+@mixin not-desktop
+  @media screen and (min-width: 1200px)
+    @content
+
+// only on -
+@mixin tinyphone
+  @media (max-width: 340px)
+    @content
+@mixin phones
+  @media screen and (max-width: 770px)
+    @content
+
+@mixin tablets
+  @media screen and (max-width: 992px)
+    @content
+
+@mixin desktop-sm
+  @media screen and (max-width: 1047px)
+    @content
+
+@mixin desktop
+  @media screen and (max-width: 1200px)
+    @content
+
+@mixin landscape
+  @media (max-width: 1024px) and (orientation: landscape)
+    @content
